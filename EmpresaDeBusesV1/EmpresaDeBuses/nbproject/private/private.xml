@@ -2,9 +2,13 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD:Test1/nbproject/private/private.xml
+        <group/>
+=======
         <group>
             <file>file:/D:/EmpresaDeBuses/src/empresadebuses/cDatos.java</file>
             <file>file:/D:/EmpresaDeBuses/src/empresadebuses/EmpresaDeBuses.java</file>
         </group>
+>>>>>>> 57a28bff7ad6d923ef340a3933e55a7c1b2db342:EmpresaDeBusesV1/EmpresaDeBuses/nbproject/private/private.xml
     </open-files>
 </project-private>
