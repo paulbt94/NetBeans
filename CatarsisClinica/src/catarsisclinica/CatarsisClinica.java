@@ -37,9 +37,12 @@ public class CatarsisClinica {
             opcion = scan.nextInt();
             if (opcion == 1) {
                 cDatos.Asignar();
+            }else if (opcion == 3){
+                cDatos.Reporte();
             }
         }
         
     }
+    
     
 }

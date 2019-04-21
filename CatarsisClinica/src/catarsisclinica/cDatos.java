@@ -65,5 +65,17 @@ public class cDatos {
         
     }
     
-    
+    public static void Reporte(){
+        System.out.println("Seleccione es dia que desea visualizar: ");
+        dia = scan.nextInt();
+        System.out.println("Seleccione la hora: ");
+        hora = scan.nextInt();
+        for (int i = 0; i<3; i++) {
+            if (cita[dia-1][hora-1][i].Estado == 0){
+                System.out.println("Cita " + (i+1) + " disponible");
+            } else {
+                System.out.println("Cita " + (i+1) + " no disponible");
+            }
+        }
+    }
 }
