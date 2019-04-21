@@ -22,6 +22,8 @@ public class CatarsisClinica {
         
         
         //Inicializar clase
+        cDatos.Inicializar();
+        
         //Saludo de bienvenida
         System.out.println("Bienvenido al Sistema de gestion de expedientes electronicos de la Clinica Catarsis.");
         System.out.println("Por favor digite el numero de una de las siguientes opciones:");
@@ -33,7 +35,9 @@ public class CatarsisClinica {
             System.out.println("3. Reportes");
             System.out.println("0. Salir");
             opcion = scan.nextInt();
-            //Continuar el if con las opciones de la clase
+            if (opcion == 1) {
+                cDatos.Asignar();
+            }
         }
         
     }
