@@ -17,7 +17,7 @@ public class cDatos {
     private static int hora;
     private static int psicologo;
     private static int asignarCita = 0;
-    
+    private static cCrearArchivo archivo = new cCrearArchivo();
     
     public static void Inicializar() {
         for (int x = 0; x < 7; x++) {
@@ -35,6 +35,7 @@ public class cDatos {
         String telefono;
         String cedula;
         String correo;
+        String texto = "";
         
         System.out.println("Seleccione el dia del 1 al 7: ");
         dia = scan.nextInt();
@@ -58,11 +59,27 @@ public class cDatos {
             cita[dia-1][hora-1][psicologo-1].Estado = 1;
             System.out.println("Su cita ha sido asignada!");
             //Guardar en disco
+            texto += dia;
+            texto += "\t";
+            texto += hora;
+            texto += "\t";
+            texto += psicologo;
+            texto += "\t";
+            texto += cedula;
+            texto += "\t";
+            texto += nombre;
+            texto += "\t";
+            texto += telefono;
+            texto += "\t";
+            texto += correo;
+            texto += "\t";
+            texto += "Asignada"; 
+            texto += "\n";
+            archivo.crearArchivo(texto);
+            
         } else if (cita[dia-1][hora-1][psicologo-1].Estado == 1){
             System.out.println("La cita solicitada no se encuentra disponible!");
         }
-        
-        
     }
     
     public static void Reporte(){

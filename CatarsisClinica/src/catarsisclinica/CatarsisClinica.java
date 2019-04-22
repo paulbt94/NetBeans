@@ -4,6 +4,10 @@
  * and open the template in the editor.
  */
 package catarsisclinica;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Scanner;
 
 /**
@@ -15,11 +19,11 @@ public class CatarsisClinica {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // TODO code application logic here
         int opcion = 1;
         Scanner scan = new Scanner(System.in);
-        
+        cCrearArchivo.leerArchivo();
         
         //Inicializar clase
         cDatos.Inicializar();
@@ -37,12 +41,11 @@ public class CatarsisClinica {
             opcion = scan.nextInt();
             if (opcion == 1) {
                 cDatos.Asignar();
+                
             }else if (opcion == 3){
                 cDatos.Reporte();
             }
         }
-        
     }
-    
-    
+ 
 }
