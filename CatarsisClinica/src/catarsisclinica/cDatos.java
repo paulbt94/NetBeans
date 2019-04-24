@@ -38,13 +38,13 @@ public class cDatos {
         String correo = "";
         String texto = "";
         
-        System.out.println("\033[33m1. Lunes"+"\t"+"2. Martes"+"\t"+"3. Miercoles"+"\t"+"4. Jueves"+"\t"+"5. Viernes"+"\t"+"6. Sabado"+"\t"+"7. Domingo" );
+        System.out.println("1. Lunes"+"\t"+"2. Martes"+"\t"+"3. Miercoles"+"\t"+"4. Jueves"+"\t"+"5. Viernes"+"\t"+"6. Sabado"+"\t"+"7. Domingo" );
         System.out.println("Seleccione el dia del 1 al 7: ");
         dia = scan.nextInt();
-        System.out.println("\033[33m1. 8-9AM"+"\t"+"2. 9-10AM"+"\t"+"3. 10-11AM"+"\t"+"4. 11-12PM"+"\t"+"5. 12-1PM"+"\t"+"6. 1-2PM"+"\t"+"7. 2-3PM"+"\t"+"8. 3-4PM"+"\t"+"9. 4-5PM" );
+        System.out.println("1. 8-9AM"+"\t"+"2. 9-10AM"+"\t"+"3. 10-11AM"+"\t"+"4. 11-12PM"+"\t"+"5. 12-1PM"+"\t"+"6. 1-2PM"+"\t"+"7. 2-3PM"+"\t"+"8. 3-4PM"+"\t"+"9. 4-5PM" );
         System.out.println("Seleccione la hora del 1 al 9: ");
         hora = scan.nextInt();
-        System.out.println("\033[33m1. Elliot Castro"+"\t"+"2. Juan Perez"+"\t"+"3. Daniela Jimenez");
+        System.out.println("1. Elliot Castro"+"\t"+"2. Juan Perez"+"\t"+"3. Daniela Jimenez");
         System.out.println("Seleccione el Psicologo del 1 al 3: ");
         psicologo = scan.nextInt();
         
@@ -53,7 +53,7 @@ public class cDatos {
             System.out.println("Digite su nombre: ");
             nombre = scan.next();
             if (!nombre.matches("^[A-Za-z ]*$")){
-            System.out.println("\033[31mSolo puede digitar Letras y espacios");
+            System.out.println("Solo puede digitar Letras y espacios");
             nombre = "";
             }
         } 
@@ -62,7 +62,7 @@ public class cDatos {
             System.out.println("Digite su numero de telefono: ");
             telefono = scan.next();
             if (!telefono.matches("[0-9]*")){
-            System.out.println("\033[31mSolo puede digitar numeros");
+            System.out.println("Solo puede digitar numeros");
             telefono = "";
             }
         } 
@@ -71,7 +71,7 @@ public class cDatos {
             System.out.println("Digite su numero de cedula utlizando solo numeros:  ");
             cedula = scan.next();
             if (!cedula.matches("[0-9]*")){
-            System.out.println("\033[31mSolo puede digitar numeros");
+            System.out.println("Solo puede digitar numeros");
             cedula = "";
             }
         } 
@@ -81,7 +81,7 @@ public class cDatos {
             correo = scan.next();
             if (!correo.matches("^[_a-z0-9-]+(\\.[_a-z0-9-]+)*@" +
       "[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,4})$")){
-            System.out.println("\033[31mEl formato debe ser xxxxxx@xxxxx.xxx");
+            System.out.println("El formato debe ser xxxxxx@xxxxx.xxx");
             correo = "";
             }
         } 
@@ -116,7 +116,7 @@ public class cDatos {
             
             //Cita no disponible
         } else if (cita[dia-1][hora-1][psicologo-1].Estado == 1){
-            System.out.println("\033[31mLa cita solicitada no se encuentra disponible!");
+            System.out.println("La cita solicitada no se encuentra disponible!");
         }
     }
     
@@ -139,10 +139,27 @@ public class cDatos {
         String recomendaciones;
         String texto = "";
         
-        System.out.println("Por favor indique el padecimiento encontrado: ");
-        padecimiento = scan.next();
-        System.out.println("Por favor indique las recomendaciones para el paciente: ");
-        recomendaciones = scan.next();
+        System.out.println("1. Lunes"+"\t"+"2. Martes"+"\t"+"3. Miercoles"+"\t"+"4. Jueves"+"\t"+"5. Viernes"+"\t"+"6. Sabado"+"\t"+"7. Domingo" );
+        System.out.println("Seleccione el dia del 1 al 7: ");
+        dia = scan.nextInt();
+        System.out.println("1. 8-9AM"+"\t"+"2. 9-10AM"+"\t"+"3. 10-11AM"+"\t"+"4. 11-12PM"+"\t"+"5. 12-1PM"+"\t"+"6. 1-2PM"+"\t"+"7. 2-3PM"+"\t"+"8. 3-4PM"+"\t"+"9. 4-5PM" );
+        System.out.println("Seleccione la hora del 1 al 9: ");
+        hora = scan.nextInt();
+        System.out.println("1. Elliot Castro"+"\t"+"2. Juan Perez"+"\t"+"3. Daniela Jimenez");
+        System.out.println("Seleccione el Psicologo del 1 al 3: ");
+        psicologo = scan.nextInt();
+        if (cita[dia-1][hora-1][psicologo-1].Estado == 1){
+            System.out.println("Por favor indique el padecimiento encontrado: ");
+            padecimiento = scan.next();
+            System.out.println("Por favor indique las recomendaciones para el paciente: ");
+            recomendaciones = scan.next();
+            
+            System.out.println("Se ha creado un nuevo expediente");
+            
+        } else if (cita[dia-1][hora-1][psicologo-1].Estado == 0){
+            System.out.println("No cuenta cuenta con una cita, por favor asignar una cita desde el menu principal");
+        }
+        
         
         
     }
