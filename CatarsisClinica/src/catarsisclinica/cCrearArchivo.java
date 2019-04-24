@@ -20,7 +20,7 @@ import java.io.Writer;
  * @author pauls
  */
 public class cCrearArchivo {
-    String[] archivoLeido = new String[8];
+    String[] archivoLeido = new String[10];
     public static void crearArchivo(String texto){
         File file = new File("Catarsis.txt");
 

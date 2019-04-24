@@ -36,6 +36,7 @@ public class CatarsisClinica {
             System.out.println("1. Citas");
             System.out.println("2. Expedientes");
             System.out.println("3. Reportes");
+            System.out.println("4. Resultados de cita");
             System.out.println("0. Salir");
             opcion = scan.nextInt();
             if (opcion == 1) {
@@ -43,6 +44,8 @@ public class CatarsisClinica {
                 
             }else if (opcion == 3){
                 cDatos.Reporte();
+            }else if (opcion == 4){
+                cDatos.Resultado();
             }
         }
     }
