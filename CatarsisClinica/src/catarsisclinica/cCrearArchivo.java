@@ -33,7 +33,7 @@ public class cCrearArchivo {
         }
     }
     
-    /*
+    
     public static void leerArchivo() throws FileNotFoundException, IOException{
         File file = new File("Catarsis.txt");
         BufferedReader br = new BufferedReader(new FileReader(file));
@@ -41,5 +41,7 @@ public class cCrearArchivo {
         while((st = br.readLine()) != null){
             System.out.println(st);
         }
-    }*/
+    }
+    
+    
 }

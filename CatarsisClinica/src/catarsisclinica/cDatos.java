@@ -31,10 +31,10 @@ public class cDatos {
     }
     
     public static void Asignar() {
-        String nombre;
-        String telefono;
-        String cedula;
-        String correo;
+        String nombre = "";
+        String telefono = "";
+        String cedula = "";
+        String correo = "";
         String texto = "";
         
         System.out.println("Seleccione el dia del 1 al 7: ");
@@ -43,14 +43,46 @@ public class cDatos {
         hora = scan.nextInt();
         System.out.println("Seleccione el Psicologo del 1 al 3: ");
         psicologo = scan.nextInt();
-        System.out.println("Digite su nombre: ");
-        nombre = scan.next();
-        System.out.println("Digite su numero de telefono: ");
-        telefono = scan.next();
-        System.out.println("Digite su numero de cedula: ");
-        cedula = scan.next();
-        System.out.println("Digite su correo electronico: ");
-        correo = scan.next();
+        
+        //Datos con validaciones
+        while (nombre.equals("")){
+            System.out.println("Digite su nombre: ");
+            nombre = scan.next();
+            if (!nombre.matches("^[A-Za-z ]*$")){
+            System.out.println("Solo puede digitar Letras y espacios");
+            nombre = "";
+            }
+        } 
+        
+        while (telefono.equals("")){
+            System.out.println("Digite su numero de telefono: ");
+            telefono = scan.next();
+            if (!telefono.matches("[0-9]*")){
+            System.out.println("Solo puede digitar numeros");
+            telefono = "";
+            }
+        } 
+        
+        while (cedula.equals("")){
+            System.out.println("Digite su numero de cedula utlizando solo numeros:  ");
+            cedula = scan.next();
+            if (!cedula.matches("[0-9]*")){
+            System.out.println("Solo puede digitar numeros");
+            cedula = "";
+            }
+        } 
+        
+        while (correo.equals("")){
+            System.out.println("Digite su correo electronico:  ");
+            correo = scan.next();
+            if (!correo.matches("^[_a-z0-9-]+(\\.[_a-z0-9-]+)*@" +
+      "[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,4})$")){
+            System.out.println("El formato debe ser xxxxxx@xxxxx.xxx");
+            correo = "";
+            }
+        } 
+        
+
         if (cita[dia-1][hora-1][psicologo-1].Estado==0) {
             cita[dia-1][hora-1][psicologo-1].Nombre = nombre;
             cita[dia-1][hora-1][psicologo-1].Telefono = telefono;
@@ -58,7 +90,7 @@ public class cDatos {
             cita[dia-1][hora-1][psicologo-1].Correo = correo;
             cita[dia-1][hora-1][psicologo-1].Estado = 1;
             System.out.println("Su cita ha sido asignada!");
-            //Guardar en disco
+            //Guardar en archivo
             texto += dia;
             texto += "\t";
             texto += hora;
