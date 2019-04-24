@@ -23,7 +23,6 @@ public class CatarsisClinica {
         // TODO code application logic here
         int opcion = 1;
         Scanner scan = new Scanner(System.in);
-        cCrearArchivo.leerArchivo();
         
         //Inicializar clase
         cDatos.Inicializar();

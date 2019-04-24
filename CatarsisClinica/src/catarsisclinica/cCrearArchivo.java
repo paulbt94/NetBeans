@@ -33,12 +33,13 @@ public class cCrearArchivo {
         }
     }
     
+    /*
     public static void leerArchivo() throws FileNotFoundException, IOException{
-        File file = new File("C:\\Users\\pauls\\OneDrive\\Documents\\NetBeansProjects\\CatarsisClinica\\Catarsis.txt");
+        File file = new File("Catarsis.txt");
         BufferedReader br = new BufferedReader(new FileReader(file));
         String st;
         while((st = br.readLine()) != null){
             System.out.println(st);
         }
-    }
+    }*/
 }
