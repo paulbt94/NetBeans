@@ -20,6 +20,8 @@ public class cDatos {
     private static int asignarCita = 0;
     private static cCrearArchivo archivo = new cCrearArchivo();
     
+    
+    
     public static void Inicializar() {
         for (int x = 0; x < 7; x++) {
             for (int y = 0; y < 9; y++) {
@@ -121,10 +123,11 @@ public class cDatos {
         }
     }
     
+    //Generar reporte de disponibilidad de citas
     public static void Reporte(){
-        System.out.println("Seleccione es dia que desea visualizar: ");
+        System.out.println("Seleccione el dia que desea visualizar del 1 al 7: ");
         dia = scan.nextInt();
-        System.out.println("Seleccione la hora: ");
+        System.out.println("Seleccione la hora del 1 al 9: ");
         hora = scan.nextInt();
         for (int i = 0; i<3; i++) {
             if (cita[dia-1][hora-1][i].Estado == 0){
@@ -135,6 +138,7 @@ public class cDatos {
         }
     }
     
+    //Generar expediente agregando padecimiento y recomendaciones
     public static void Expediente(){
         String padecimiento;
         String recomendaciones;
@@ -165,19 +169,22 @@ public class cDatos {
 
     }
     
+    //Buscar expediente
     public static void Buscar(){
         String Ced;
         
         System.out.println("Por favor digite el numero de cedula del expediente que desea visulizar: ");
         Ced = scan.next();
         
-        System.out.println(Arrays.asList(cita));
         
-        /*if (cita[dia-1][hora-1][psicologo-1].Estado == 1){
+        
+        //System.out.println(Arrays.asList(cita));
+        
+        if (cita[dia-1][hora-1][psicologo-1].Estado == 1){
             System.out.println(Arrays.toString(cita));
         }else if (cita[dia-1][hora-1][psicologo-1].Estado == 0){
             System.out.println("No existe el expediente");
             
-        }*/
+        }
     }
 }

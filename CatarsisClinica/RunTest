@@ -1,0 +1,82 @@
+run:
+Bienvenido al Sistema de gestion de expedientes electronicos de la Clinica Catarsis.
+Por favor digite el numero de una de las siguientes opciones:
+1. Asignar citas
+2. Crear expedientes
+3. Buscar expediente
+4. Reporte de disponibilidad
+0. Salir
+1
+1. Lunes	2. Martes	3. Miercoles	4. Jueves	5. Viernes	6. Sabado	7. Domingo
+Seleccione el dia del 1 al 7: 
+5
+1. 8-9AM	2. 9-10AM	3. 10-11AM	4. 11-12PM	5. 12-1PM	6. 1-2PM	7. 2-3PM	8. 3-4PM	9. 4-5PM
+Seleccione la hora del 1 al 9: 
+4
+1. Elliot Castro	2. Juan Perez	3. Daniela Jimenez
+Seleccione el Psicologo del 1 al 3: 
+3
+Digite su nombre: 
+Jean Paul Bolaños Torres
+Digite su numero de telefono: 
+Solo puede digitar numeros
+Digite su numero de telefono: 
+Solo puede digitar numeros
+Digite su numero de telefono: 
+Solo puede digitar numeros
+Digite su numero de telefono: 
+72571316
+Digite su numero de cedula utlizando solo numeros:  
+207240147
+Digite su correo electronico:  
+paul@hotmail.com
+Su cita ha sido asignada!
+1. Asignar citas
+2. Crear expedientes
+3. Buscar expediente
+4. Reporte de disponibilidad
+0. Salir
+2
+1. Lunes	2. Martes	3. Miercoles	4. Jueves	5. Viernes	6. Sabado	7. Domingo
+Seleccione el dia del 1 al 7: 
+5
+1. 8-9AM	2. 9-10AM	3. 10-11AM	4. 11-12PM	5. 12-1PM	6. 1-2PM	7. 2-3PM	8. 3-4PM	9. 4-5PM
+Seleccione la hora del 1 al 9: 
+4
+1. Elliot Castro	2. Juan Perez	3. Daniela Jimenez
+Seleccione el Psicologo del 1 al 3: 
+3
+Por favor indique el padecimiento encontrado: 
+Estres
+Por favor indique las recomendaciones para el paciente: 
+Descanso
+Se ha creado un nuevo expediente
+1. Asignar citas
+2. Crear expedientes
+3. Buscar expediente
+4. Reporte de disponibilidad
+0. Salir
+4
+Seleccione el dia que desea visualizar del 1 al 7: 
+5
+Seleccione la hora del 1 al 9: 
+4
+Cita 1 disponible
+Cita 2 disponible
+Cita 3 no disponible
+1. Asignar citas
+2. Crear expedientes
+3. Buscar expediente
+4. Reporte de disponibilidad
+0. Salir
+3
+Por favor digite el numero de cedula del expediente que desea visulizar: 
+207240147
+[[[Lcatarsisclinica.cCita;@55f96302, [[Lcatarsisclinica.cCita;@3d4eac69, [[Lcatarsisclinica.cCita;@42a57993, [[Lcatarsisclinica.cCita;@75b84c92, [[Lcatarsisclinica.cCita;@6bc7c054, [[Lcatarsisclinica.cCita;@232204a1, [[Lcatarsisclinica.cCita;@4aa298b7]
+1. Asignar citas
+2. Crear expedientes
+3. Buscar expediente
+4. Reporte de disponibilidad
+0. Salir
+0
+BUILD SUCCESSFUL (total time: 2 minutes 26 seconds)
