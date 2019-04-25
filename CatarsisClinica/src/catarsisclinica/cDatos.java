@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package catarsisclinica;
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -134,7 +135,7 @@ public class cDatos {
         }
     }
     
-    public static void Resultado(){
+    public static void Expediente(){
         String padecimiento;
         String recomendaciones;
         String texto = "";
@@ -155,12 +156,28 @@ public class cDatos {
             recomendaciones = scan.next();
             
             System.out.println("Se ha creado un nuevo expediente");
+            cita[dia-1][hora-1][psicologo-1].Padecimiento = padecimiento;
+            cita[dia-1][hora-1][psicologo-1].Recomendaciones = recomendaciones;
             
         } else if (cita[dia-1][hora-1][psicologo-1].Estado == 0){
-            System.out.println("No cuenta cuenta con una cita, por favor asignar una cita desde el menu principal");
+            System.out.println("No cuenta con una cita, por favor asignar una cita desde el menu principal");
         }
+
+    }
+    
+    public static void Buscar(){
+        String Ced;
         
+        System.out.println("Por favor digite el numero de cedula del expediente que desea visulizar: ");
+        Ced = scan.next();
         
+        System.out.println(Arrays.asList(cita));
         
+        /*if (cita[dia-1][hora-1][psicologo-1].Estado == 1){
+            System.out.println(Arrays.toString(cita));
+        }else if (cita[dia-1][hora-1][psicologo-1].Estado == 0){
+            System.out.println("No existe el expediente");
+            
+        }*/
     }
 }

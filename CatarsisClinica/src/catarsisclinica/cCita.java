@@ -13,6 +13,8 @@ public class cCita {
     public String Telefono;
     public String Cedula;
     public String Correo;
+    public String Padecimiento;
+    public String Recomendaciones;
     public int Estado = 0;
     
     

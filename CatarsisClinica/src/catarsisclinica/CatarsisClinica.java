@@ -33,19 +33,20 @@ public class CatarsisClinica {
         
         //Menu principal de usuario
         while(opcion != 0) {
-            System.out.println("1. Citas");
-            System.out.println("2. Expedientes");
-            System.out.println("3. Reportes");
-            System.out.println("4. Resultados de cita");
+            System.out.println("1. Asignar citas");
+            System.out.println("2. Crear expedientes");
+            System.out.println("3. Buscar expediente");
+            System.out.println("4. Reporte de disponibilidad");
             System.out.println("0. Salir");
             opcion = scan.nextInt();
             if (opcion == 1) {
                 cDatos.Asignar();
-                
+            }else if (opcion == 2){
+                cDatos.Expediente();
             }else if (opcion == 3){
-                cDatos.Reporte();
+                cDatos.Buscar();
             }else if (opcion == 4){
-                cDatos.Resultado();
+                cDatos.Reporte();
             }
         }
     }
