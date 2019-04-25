@@ -175,13 +175,9 @@ public class cDatos {
         
         System.out.println("Por favor digite el numero de cedula del expediente que desea visulizar: ");
         Ced = scan.next();
-        
-        
-        
-        //System.out.println(Arrays.asList(cita));
-        
+
         if (cita[dia-1][hora-1][psicologo-1].Estado == 1){
-            System.out.println(Arrays.toString(cita));
+            System.out.println(Arrays.asList(cita));
         }else if (cita[dia-1][hora-1][psicologo-1].Estado == 0){
             System.out.println("No existe el expediente");
             
