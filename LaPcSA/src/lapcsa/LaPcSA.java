@@ -37,7 +37,7 @@ public class LaPcSA {
             opcion = scan.nextInt();
             
             if (opcion == 1){
-                cDatos.Ingresar();
+                //cDatos.Ingresar();
             }
             
         }

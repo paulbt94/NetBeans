@@ -13,35 +13,30 @@ import java.util.*;
  */
 public class cDatos {
     private static Scanner scan = new Scanner(System.in);
-    private static cCompu compu[] = new cCompu[20];
+    private static cCompu compu[][] = new cCompu[20][20];
     private static int pc;
+    private static int serie;
     
     
     
     //Inicializar
     public static void Inicializar() {
         for (int x = 0; x < 20; x++){
-            compu[x] = new cCompu();
-        }
+            for (int y = 0; y < 20; y++){
+                compu[x][y] = new cCompu();
+            }
+        }    
     }
-    
-    
-    //Ingresar compu
-    public static void Ingresar(){
-        int serie;
+   
+    public static void Ingresar() {
         String descripcion;
         String propietario;
         String telefono;
         String detalle;
         
-        while (pc <= 20) {
-            System.out.println("Digite la prioridad en la que desea que se repare su pc del 1 al 20: ");
+                
+        System.out.println("Digite la prioridad en la que desea que se repare su pc del 1 al 20: ");
         pc = scan.nextInt();
-        } if (pc > 20) {
-            System.out.println("El valor debe ser entre 1 y 20");
-        }
-        
-        
         
         System.out.println("Digite el numero de serie de su computadora: ");
         serie = scan.nextInt();
@@ -58,20 +53,16 @@ public class cDatos {
         System.out.println("Describa la falla de la computadora: ");
         detalle = scan.next();
         
-        if(compu[pc-1].Estado == 0) {
-            compu[pc-1].Serie = serie;
-            compu[pc-1].Descripcion = descripcion;
-            compu[pc-1].Propietario = propietario;
-            compu[pc-1].Telefono = telefono;
-            compu[pc-1].Detalle = detalle;
-            compu[pc-1].Estado = 1;
+        if(compu[pc-1][serie-1].Estado == 0) {
+            compu[pc-1][serie-1].Descripcion = descripcion;
+            compu[pc-1][serie-1].Propietario = propietario;
+            compu[pc-1][serie-1].Telefono = telefono;
+            compu[pc-1][serie-1].Detalle = detalle;
+            compu[pc-1][serie-1].Estado = 1;
             
             System.out.println("Su computadora ha sido agregada al sistema!");
-        } else if (compu[pc-1].Estado == 1) {
+        } else if (compu[pc-1][serie-1].Estado == 1) {
             System.out.println("No hay espacios disponibles");
         }
-        
     }
-
-    
 }
