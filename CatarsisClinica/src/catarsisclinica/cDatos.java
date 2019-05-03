@@ -21,7 +21,7 @@ public class cDatos {
     private static cCrearArchivo archivo = new cCrearArchivo();
     
     
-    
+    //Inicializamos el arreglo en ceros
     public static void Inicializar() {
         for (int x = 0; x < 7; x++) {
             for (int y = 0; y < 9; y++) {
